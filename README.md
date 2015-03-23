@@ -1,8 +1,9 @@
 # RotaryTable
 
 A rotating platform for 100Kg/220lbs typical loads.
-    
+
 Possible uses:
+--------------
 - 3D Scanning of people 
 - Rotary axis for CNC machining or 3D Printing
 - Showroom displays
@@ -10,14 +11,16 @@ Possible uses:
 - Cake decoration?
 - ... and more
 
+    This platform was initially designed to automate 3D scanning of people and objects with Kinect v2 and 3D Builder. I needed a precision, stepper driven, low profile platform to experiment with various modes of scanning. 
+
 Characteristics (typical):
+--------------------------
 - platform diameter: 0.5 to 1 meter (2 to 3ft appx) 
-- speed: <3 RPM 
+- speed: <3 RPM
 - Peripheral speed: 25-50mm/s
 
-   This platform was initially designed to automate 3D scanning of people and objects with Kinect v2 and 3D Builder. I needed a preciosion, stepper driven, low profile platform to experiment with various modes of scanning. I can probably be used for more than that, but the design here 
-
 Parts required (INCOMPLETE!):
+-----------------------------
 - 1x - 450mm Lazy Susan Aluminum Bearing 500 lbs Turntable Bearings (VXB Brand). Will need to be drilled!
 - 1x - Stepper motor driver DM420A 
 - 1x - NEMA23, torque: 25 Kg cm (350 oz in). Alternative is a NEMA17 planetary gear motor.
