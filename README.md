@@ -4,13 +4,15 @@ A rotating platform for 100Kg/220lbs typical loads.
 
 Possible uses:
 --------------
-- 3D Scanning of people 
+- 3D Scanning of people
 - Rotary axis for CNC machining or 3D Printing
 - Showroom displays
 - Automatic tool changer
 - Cake decoration?
 - ... and more
 
+Description:
+------------
     This platform was initially designed to automate 3D scanning of people and objects with Kinect v2 and 3D Builder. I needed a precision, stepper driven, low profile platform to experiment with various modes of scanning. 
 
 Characteristics (typical):
