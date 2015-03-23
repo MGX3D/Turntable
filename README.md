@@ -26,6 +26,7 @@ Parts required (INCOMPLETE!):
 - 1x - 450mm Lazy Susan Aluminum Bearing 500 lbs Turntable Bearings (VXB Brand). Will need to be drilled!
 - 1x - Stepper motor driver DM420A 
 - 1x - NEMA23, torque: 25 Kg cm (350 oz in). Alternative is a NEMA17 planetary gear motor.
+- 4x - M5 30mm (for the NEMA23 mount - alternative is M4 >35mm and nuts)
 - 1x - 962MXL Timing Belt, .080" Pitch, 77" Outer Circle, 3/16" Wide (McMaster 1679K685) 
 - 2x - M3 20mm with nuts and 2 washers each (for the belt tensioner)
 - 4x - F623ZZ: 3x10x4mm flanged bearings (for the belt tensioner)
