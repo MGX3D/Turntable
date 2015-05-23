@@ -2,27 +2,17 @@
 
 A high precision rotating platform for 100Kg/220lbs typical loads.
 
-Possible uses:
---------------
-- 3D Scanning of people - using Kinect v2 and 3D Builder 
-- Rotary axis for CNC machining or 3D Printing
-- Showroom displays for heavy objects
-- Automatic tool changer for CNCs
-- Cake decoration?
-- ... and more
-
-
-
+![Turntable Bottom View](/images/TurntableBottom.jpg?raw=true "Bottom view")
 
 Description:
 ------------
-    This platform was initially designed to automate 3D scanning of people and objects with Kinect v2 and 3D Builder. I needed a precision, stepper driven, low profile platform to experiment with various modes of scanning. The platform has completed more than 2500 scans of people to date.
+This platform was initially designed to automate 3D scanning of people and objects with Kinect v2 and 3D Builder. I needed a precision, stepper driven, low profile platform to experiment with various modes of scanning. The platform has completed more than 2500 scans of people to date.
 
 Characteristics (typical):
 --------------------------
 - platform diameter: 0.5 to 1 meter (2 to 3ft appx) 
-- speed: 0-3 RPM
-- Peripheral speed: 25-50mm/s
+- speed: 0-3 RPM (peripheral speed: 25-50mm/s)
+- loads: up to 300lbs
 
 Parts required (INCOMPLETE and NOT FINAL: order at your own risk):
 -----------------------------
@@ -44,3 +34,18 @@ Parts required (INCOMPLETE and NOT FINAL: order at your own risk):
 - 1x - 24" (500mm) disc. For 3d scanning of people: preferably 1" thick plywood alternative: 1 in. x 24 in. x 2 ft. Pine Edge Glued Panel Round Board at Home Depot (paint or cover with no-slip tape). For other uses: polycarbonate or tempered glass (>3/8", heavy!) or 3/8"-1/2" aluminum disc.
 - 1x - Arduino+RAMPS running 3D Printer firmware, motor X hooked to the platform. Alternative is Raspberry Pi 2 + Windows 10, GPIO 5/6/13 wired to the controller.
 
+
+Assembly Instructions:
+----------------------
+Below you can seea top view of the turntable with the platform removed. The (lazy susan) bearing is attached to the extrusion by drilling through the 6 holes for the 8-32 screws. Two drilling operations are required, one for the screw itself and a secondary one for the screw cap (the screw need to be sunk to allow the plaform on top to rotate). Next, the plarform attaches to the bearing in a similar way: with screws from the bottom. An alternative is to use double sided adhesive tape (red in the image), however once mounted like this it won't be possible to access to the bottom screws anymore. The belt goes on the motor pulley, through the tensioner (in between the 4 bearings) and then directly on the big  bearing.  The friction on the bearing is more than sufficient and the incidence angle is very gentle to the belt teeth.  
+
+![Turntable Top View](/images/TurntableTop.jpg?raw=true "Top view")
+
+Possible uses:
+--------------
+- 3D Scanning of people - using Kinect v2 and 3D Builder 
+- Rotary axis for CNC machining or 3D Printing
+- Showroom displays for heavy objects
+- Automatic tool changer for CNCs
+- Cake decoration?
+- ... and more
