@@ -37,7 +37,19 @@ Parts required (INCOMPLETE and NOT FINAL: order at your own risk):
 
 Assembly Instructions:
 ----------------------
-Below you can seea top view of the turntable with the platform removed. The (lazy susan) bearing is attached to the extrusion by drilling through the 6 holes for the 8-32 screws. Two drilling operations are required, one for the screw itself and a secondary one for the screw cap (the screw need to be sunk to allow the plaform on top to rotate). Next, the plarform attaches to the bearing in a similar way: with screws from the bottom. An alternative is to use double sided adhesive tape (red in the image), however once mounted like this it won't be possible to access to the bottom screws anymore. The belt goes on the motor pulley, through the tensioner (in between the 4 bearings) and then directly on the big  bearing.  The friction on the bearing is more than sufficient and the incidence angle is very gentle to the belt teeth.  
+The movement in this platform is a quite unique: the belt goes directly from 40T motor pulley to the big bearing, through a bi-lateral belt tensioner. This simple arrangment works incredibly well in practice as it achieves a zero backlash 18:1 reduction at a very low cost. The bearing does not need teeth: due to its very large diameter it achieves zero slip through friction. The incidence angle of the belt is gentle enough to not damage the teeth.
+
+![Movement View](/images/motor_assembly.jpg?raw=true "Movement view")
+
+![Motor Assembly View](/images/motor_assembly_annotated.jpg?raw=true "Motor assembly")
+
+![Motor Mount View](/images/motor_mount_annotated.jpg?raw=true "Motor mount")
+
+The (lazy susan) bearing is attached directly to the aluminum extrusion by drilling through the 6 holes for 8-32 screws. Two drilling operations are required, one for the screw itself and a secondary one for the screw sockethead cap (the screw need to be sunk to allow the plaform on top to rotate). 
+
+![Bottom View](/images/platform_bottom.jpg?raw=true "Bottom view")
+
+Next, the platform attaches to the bearing in a similar way: with screws from the bottom. An alternative is to use double sided adhesive tape (red in the image), however once mounted like this it won't be possible to access to the bottom screws anymore. 
 
 ![Turntable Top View](/images/TurntableTop.jpg?raw=true "Top view")
 
