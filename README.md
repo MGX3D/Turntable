@@ -2,7 +2,7 @@
 
 A high precision rotating platform for 100Kg/220lbs typical loads.
 
-![Turntable Bottom View](/images/TurntableBottom.jpg?raw=true "Bottom view")
+![Kinect Scan View](/images/TurntableSetup.jpg?raw=true "3D Scanner view")
 
 Description:
 ------------
@@ -52,6 +52,8 @@ The (lazy susan) bearing is attached directly to the aluminum extrusion by drill
 Next, the platform attaches to the bearing in a similar way: with screws from the bottom. An alternative is to use double sided adhesive tape (red in the image), however once mounted like this it won't be possible to access to the bottom screws anymore. 
 
 ![Turntable Top View](/images/TurntableTop.jpg?raw=true "Top view")
+
+![Turntable Bottom View](/images/TurntableBottom.jpg?raw=true "Bottom view")
 
 Possible uses:
 --------------
