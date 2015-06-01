@@ -12,11 +12,11 @@ To compile:
 1. Install Arduino 1.0.6 or equivalent (http://www.arduino.cc)
 2. Install Teensyduino 1.23 or newer (http://www.pjrc.com/teensy/td_download.html)
 3. Load the sketch in Arduino
-    3.1 Set board type to "Teensy 2.0" or your equivalent
-    3.2 Set USB Type to "Raw HID"
-    3.3 Click verify. At this point it should start the Teensy app
-    3.4 Reset Teensy - the app should flash it. 
-    3.5 Tweak the parameters as needed and repeat steps 3.3 and 3.4
+  - Set board type to "Teensy 2.0" or your equivalent
+  - Set USB Type to "Raw HID"
+  - Click 'Verify'. At this point Arduino should start the Teensy firmware upload app.
+  - Reset Teensy - the app should flash it. 
+  - Tweak the parameters as needed and repeat the last two steps 
 4. Start Serial Monitor and connect at 9600 baud. You should see a message like "MGX3D Turntable v1.00 Initialized"
 
 Usage:
@@ -25,11 +25,11 @@ To test the controller, connect to the Teensyduino with raw_hidtest.exe,
 
 1. Press number keys 1-5 to select 
 the stepper control parameters:
-    1 - nSteps - The number of steps (or microsteps) to issue
-    2 - lhDelay - delay (microseconds) between Low-High transitions (example: feed rate)
-    3 - hlDelay - delay (microseconds) between High-Low transitions (example: minimum impulse)
-    4 - accRamp - slope length (impulses) for acceleration/deceleration
-    5 - accBeta - slope angle (delay) for acceleration/deceleration
+    - nSteps - The number of steps (or microsteps) to issue
+    - lhDelay - delay (microseconds) between Low-High transitions (example: feed rate)
+    - hlDelay - delay (microseconds) between High-Low transitions (example: minimum impulse)
+    - accRamp - slope length (impulses) for acceleration/deceleration
+    - accBeta - slope angle (delay) for acceleration/deceleration
 2. Press '+' or '-' to increase or decrease the parameters as needed 
 3. Press 'r' key to issue a move command. If you connect with the Serial Monitor in Arduino and should see the following:
     "
@@ -40,6 +40,9 @@ the stepper control parameters:
     "
 
 To run the controller with specific parameters, send a 64-byte buffer in the folllwing format:
+
+    Offset  Type        Meaning
+    ------  ----        -------
     0x00    byte        always 0x00 
     0x01    byte[3]     reserved
     0x04    uint16      nSteps
