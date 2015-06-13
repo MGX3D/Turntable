@@ -7,11 +7,11 @@ A high precision rotating platform for 100Kg/250lbs typical loads.
 Description:
 ------------
 This platform was initially designed to automate 3D scanning of people and objects with Kinect v2 and 3D Builder:
-- heavy duty: hold an average person or couple, work 12+ hours non-stop
-- powerful drive: spin a couple fast enough to avoid scanning artifacts (due to movement, ICD artifacts)
-- precise rotation: stepper controlled to experiment with line scanners 
+- heavy duty: hold a heavy person or average couple, run for 12+ hours non-stop
+- powerful drive: spin the person fast enough to avoid scanning artifacts due to movement, breathing, ICD, etc.
+- precise rotation: stepper controlled (and USB connected) to experiment with line scanners and algorithms
 - low profile: close to the ground increase stability when stepped on
-- easy to build: use very few parts that are easy to source (no CNC machining)
+- easy to build: use very few parts that are easy to source
      
 The current design has completed more than 2500 scans of people to date, with a typical scan taking only 30 seconds.
 
@@ -61,7 +61,7 @@ The movement in this platform is a quite unique: the belt goes directly from the
 
 ![Movement View](/images/motor_assembly.jpg?raw=true "Movement view")
 
-The belt is tensioned by sliding the tensioner towards the  bearing. The tensioner also functions as a vertucal guide for the belt. 
+The belt is tensioned by sliding the tensioner towards the  bearing. The tensioner also functions as a vertical guide for the belt. 
 
 ![Motor Assembly View](/images/motor_assembly_annotated.jpg?raw=true "Motor assembly")
 
@@ -82,7 +82,7 @@ After the bearing is attached to the extrusion (and the belt testion is roughly 
 Possible applications:
 ---------------------
 - 3D scanning of people - using Kinect v2 and 3D Builder 
-- 3D scanning of objects - using laser line scanner
+- 3D scanning of objects - using laser line scanners
 - Rotary axis for CNC machining or 3D Printing
 - Showroom displays for heavy objects
 - Automatic tool changer for CNCs
