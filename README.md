@@ -7,11 +7,11 @@ A high precision rotating platform for 100Kg/250lbs typical loads.
 Description:
 ------------
 This platform was initially designed to automate 3D scanning of people and objects with Kinect v2 and 3D Builder:
-    - heavy duty: hold an average person or couple, work 12+ hours non-stop
-    - powerful drive: spin a couple fast enough to avoid scanning artifacts (due to movement, ICD artifacts)
-    - precise rotation: stepper controlled to experiment with line scanners 
-    - low profile: close to the ground increase stability when stepped on
-    - easy to build: use very few parts that are easy to source (no CNC machining)
+- heavy duty: hold an average person or couple, work 12+ hours non-stop
+- powerful drive: spin a couple fast enough to avoid scanning artifacts (due to movement, ICD artifacts)
+- precise rotation: stepper controlled to experiment with line scanners 
+- low profile: close to the ground increase stability when stepped on
+- easy to build: use very few parts that are easy to source (no CNC machining)
      
 The current design has completed more than 2500 scans of people to date, with a typical scan taking only 30 seconds.
 
