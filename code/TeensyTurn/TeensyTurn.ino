@@ -43,12 +43,13 @@ int stepPin = 19;
 int enblPin = 21;
 int dirPin = 20;
 int readoutPin = 17;
+int triggerPin = 1;
 
 // test rotation: 300rpm (5rps, pulse at rougly 1-16Khz), assume 20:1 reduction
-unsigned int turnFactor=1;
-unsigned int speedFactor=1;
-unsigned int lhDelayFactor=3;
-unsigned int hlDelayFactor=5;
+unsigned int turnFactor=40;
+unsigned int speedFactor=4;
+unsigned int lhDelayFactor=21;
+unsigned int hlDelayFactor=21;
 unsigned int accRampFactor=64;
 unsigned int accRampBeta=32;
 
@@ -67,6 +68,8 @@ void setup()
   
   digitalWrite(enblPin, HIGH);
   digitalWrite(dirPin, HIGH);
+  
+  pinMode(triggerPin, INPUT_PULLUP);
   
   Serial.begin(9600);
   Serial.println(F("MGX3D Turntable v1.00 Initialized"));
@@ -93,6 +96,12 @@ void run_motor(unsigned int nSteps, unsigned int lhDelay, unsigned int hlDelay, 
     digitalWrite(stepPin, HIGH);
     delayMicroseconds(hlDelay);
     digitalWrite(stepPin, LOW);
+    
+    if (digitalRead(triggerPin) == LOW) {
+      // stop - the button pressed again
+      delay(250);
+      break;
+    }
     
     if (i<accRamp) {
       // accelerate
@@ -183,6 +192,10 @@ void loop()
         case 4:
           accRampBeta++;
           break;
+          
+        case 5:
+          speedFactor++;
+          break;
       }
       break;
       
@@ -207,6 +220,11 @@ void loop()
       case 4:
         accRampBeta = max(0, accRampBeta--);
         break;
+        
+      case 5:
+        speedFactor = max(1, speedFactor--);
+        break;
+        
       }
       break;
       
@@ -215,13 +233,18 @@ void loop()
     case '3':
     case '4':
     case '5':
+    case '6':
       paramSlot = buffer[0]-'1';
       break;
     
     case 'r':      
-        //int speedFactor = 1<<(buffer[0]-'1');
         run_motor(turnFactor*200*speedFactor, 8192/(1+pow(1.3,32-lhDelayFactor)), 8192/(1+pow(1.3,32-hlDelayFactor)), accRampFactor*speedFactor, accRampBeta/speedFactor);
         break;
     }
   }  
+  
+  if (digitalRead(triggerPin) == LOW) {
+      delay(250);
+      run_motor(turnFactor*200*speedFactor, 8192/(1+pow(1.3,32-lhDelayFactor)), 8192/(1+pow(1.3,32-hlDelayFactor)), accRampFactor*speedFactor, accRampBeta/speedFactor);
+  }
 }
