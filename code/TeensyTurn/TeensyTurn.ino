@@ -98,9 +98,10 @@ void run_motor(unsigned int nSteps, unsigned int lhDelay, unsigned int hlDelay, 
     digitalWrite(stepPin, LOW);
     
     if (digitalRead(triggerPin) == LOW) {
-      // stop - the button pressed again
+      // stop - the button pressed again, energency stop      
       delay(250);
-      break;
+      // return right away, do not decelerate do not send USB data (gets stuck without a listener)
+      return;
     }
     
     if (i<accRamp) {
