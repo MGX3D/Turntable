@@ -75,21 +75,25 @@ void setup()
   Serial.println(F("MGX3D Turntable v1.00 Initialized"));
 }
 
-void run_motor(unsigned int nSteps, unsigned int lhDelay, unsigned int hlDelay, unsigned int accRamp=0, unsigned int accBeta=0)
+void run_motor(int doIO, unsigned int nSteps, unsigned int lhDelay, unsigned int hlDelay, unsigned int accRamp=0, unsigned int accBeta=0)
 {
-  for (int i=0; i<64; i++) {
-      buffer[i] = 0;
+  
+  if (doIO) {
+    
+    for (int i=0; i<64; i++) {
+        buffer[i] = 0;
+    }
+    
+    Serial.print(F("RUN: ")); 
+    
+    Serial.print(F(" steps=")); Serial.print(nSteps);  
+    Serial.print(F(" LHus=")); Serial.print(lhDelay);
+    Serial.print(F(" HLus=")); Serial.print(hlDelay);
+    Serial.print(F(" accRamp=")); Serial.print(accRamp);
+    Serial.print(F(" accBeta=")); Serial.print(accBeta);
+         
+    Serial.println(F(""));
   }
-  
-  Serial.print(F("RUN: ")); 
-  
-  Serial.print(F(" steps=")); Serial.print(nSteps);  
-  Serial.print(F(" LHus=")); Serial.print(lhDelay);
-  Serial.print(F(" HLus=")); Serial.print(hlDelay);
-  Serial.print(F(" accRamp=")); Serial.print(accRamp);
-  Serial.print(F(" accBeta=")); Serial.print(accBeta);
-       
-  Serial.println(F(""));
 
   // run the motor
   for (unsigned int i=0; i<nSteps; i++) {
@@ -100,7 +104,7 @@ void run_motor(unsigned int nSteps, unsigned int lhDelay, unsigned int hlDelay, 
     if (digitalRead(triggerPin) == LOW) {
       // stop - the button pressed again, energency stop      
       delay(250);
-      // return right away, do not decelerate do not send USB data (gets stuck without a listener)
+      // return right away, do not decelerate
       return;
     }
     
@@ -117,19 +121,21 @@ void run_motor(unsigned int nSteps, unsigned int lhDelay, unsigned int hlDelay, 
     }
   }
 
-  // measure
-  for(int i=0;i<32;i++) {
-      int val = analogRead(readoutPin);
-      buffer[i*2] = highByte(val);
-      buffer[i*2 + 1] = lowByte(val);      
-  }
-
-  // send data      
-  int n = RawHID.send(buffer, 100);
-  if (n > 0) {
-      // Serial.println(F("Depth data sent"));
-  } else {
-      Serial.println(F("Unable to transmit packet"));
+  if (doIO) {
+    // measure
+    for(int i=0;i<32;i++) {
+        int val = analogRead(readoutPin);
+        buffer[i*2] = highByte(val);
+        buffer[i*2 + 1] = lowByte(val);      
+    }
+    
+    // send data      
+    int n = RawHID.send(buffer, 100);
+    if (n > 0) {
+        // Serial.println(F("Depth data sent"));
+    } else {
+        Serial.println(F("Unable to transmit packet"));
+    }
   }
 
 }
@@ -239,13 +245,13 @@ void loop()
       break;
     
     case 'r':      
-        run_motor(turnFactor*200*speedFactor, 8192/(1+pow(1.3,32-lhDelayFactor)), 8192/(1+pow(1.3,32-hlDelayFactor)), accRampFactor*speedFactor, accRampBeta/speedFactor);
+        run_motor(1, turnFactor*200*speedFactor, 8192/(1+pow(1.3,32-lhDelayFactor)), 8192/(1+pow(1.3,32-hlDelayFactor)), accRampFactor*speedFactor, accRampBeta/speedFactor);
         break;
     }
   }  
   
   if (digitalRead(triggerPin) == LOW) {
       delay(250);
-      run_motor(turnFactor*200*speedFactor, 8192/(1+pow(1.3,32-lhDelayFactor)), 8192/(1+pow(1.3,32-hlDelayFactor)), accRampFactor*speedFactor, accRampBeta/speedFactor);
+      run_motor(0, turnFactor*200*speedFactor, 8192/(1+pow(1.3,32-lhDelayFactor)), 8192/(1+pow(1.3,32-hlDelayFactor)), accRampFactor*speedFactor, accRampBeta/speedFactor);
   }
 }
