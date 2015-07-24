@@ -2,7 +2,8 @@
 
 A high precision rotating platform for 100Kg/250lbs typical loads.
 
-![Kinect Scan View](/images/TurntableSetup.jpg?raw=true "3D Scanner view")
+![Kinect Scan View](/images/Setup.jpg?raw=true "3D Scanner view")
+
 
 Description:
 ------------
@@ -78,6 +79,8 @@ After the bearing is attached to the extrusion (and the belt testion is roughly 
 
 ![Turntable Top View](/images/TurntableTop.jpg?raw=true "Top view")
 
+
+![Kinect Scan View](/images/TurntableSetup.jpg?raw=true "3D Scanner view")
 
 Possible applications:
 ---------------------
