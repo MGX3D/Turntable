@@ -30,7 +30,7 @@ Warning: not final, might be incomplete. Please be prepared to make adjustments.
 -  1x - $30 - Stepper motor driver: DM420A. Alternative: HY-DIV268N-5A.
 -  1x - $55 - NEMA23, torque: 25 Kg cm (350 oz in). Alternative is a NEMA17 planetary gear motor (not for Fusion scans!)
 -  4x -  $4 - M5 30mm socket head screws - for the NEMA23 motor mount. Alternative: M4 >35mm and nuts.
--  1x -  $6 - GT2 aluminum pulley 40T 8mm bore (anything between 20T and 40T works - bore has to match the motor). 
+-  1x -  $6 - MXL aluminum pulley 40T 8mm bore (anything between 20T and 40T works - bore has to match the motor. GT2 also works). 
 -  1x - $10 - 962MXL Timing Belt, .080" Pitch, 77" Outer Circle, 1/4" Wide (McMaster 1679K686, alternative 3/16" 1679K685) 
 -  4x -  $3 - F623ZZ: 3x10x4mm flanged bearing for the belt tensioner. Likely to be upgraded to F634zz.
 -  2x -  $1 - M3 20mm with 1 nut and 2 washers each. Holds the bearings in the belt tensioner (will be M4 for F634zz).
