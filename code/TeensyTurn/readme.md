@@ -21,7 +21,7 @@ To compile:
 
 Usage:
 --------
-To test the controller, connect to the Teensyduino with raw_hidtest.exe, 
+To test the controller, connect to the Teensyduino with raw_hidtest.exe (https://www.pjrc.com/teensy/rawhid.html), 
 
 1. Press number keys 1-5 to select 
 the stepper control parameters:
