@@ -28,7 +28,7 @@ Parts required:
 Warning: not final, might be incomplete. Please be prepared to make adjustments. Unless otherwise noted, eBay/Amazon is a good source for parts.
 -  1x - $40 - 450mm Lazy Susan Aluminum Bearing 500 lbs Turntable Bearings (VXB Brand). 
 -  1x - $30 - Stepper motor driver: DM420A. Alternative: HY-DIV268N-5A.
--  1x - $55 - NEMA23, torque: 25 Kg cm (350 oz in) (example: Wantai 57BYGH115-003 / 3.0A, but many others work here). 
+-  1x - $55 - NEMA23, torque: 25 Kg cm (350 oz. in) (example: Wantai 57BYGH115-003 / 3.0A, but many others work here). 
               Alternative is a NEMA17 planetary gear motor (not for Fusion scans!)
 -  4x -  $4 - M5 30mm socket head screws - for the NEMA23 motor mount. Alternative: M4 >35mm and nuts.
 -  1x -  $6 - MXL aluminum pulley 40T 8mm bore (anything between 20T and 40T works - bore has to match the motor. GT2 also works). 
@@ -38,7 +38,7 @@ Warning: not final, might be incomplete. Please be prepared to make adjustments.
 -  1x -  $0 - 3D printed part for the NEMA23 mount (STLs in the CAD folder)
 -  1x -  $0 - 3D printed part for the belt tensioner (STLs in the CAD folder)
 -  1x - $20 - Teensy 2.0. Alternative: any Pulse/Dir/Enable capable electronics (examples: Arduino w/ RAMPS shield and shim from Pololu to DM420A or Raspberry Pi 2 with Windows 10 using GPIO pins, etc). 
--  1x - $20 - 1" 8020 72" aluminum extrusion (1010 profile). Will need to be cut in 32"+20"+20". Alternative: metric t-slot exstrusion of 20mm or larger.
+-  1x - $20 - 1" 8020 72" aluminum extrusion (1010 profile). Will need to be cut in 32"+20"+20". Alternative: metric t-slot extrusion of 20mm or larger.
 -  4x -  $4 - 1/4-20 1/2" pan head screws and t-slot nuts - attach the printed parts (motor mount and tensioner) to the aluminum extrusion. Alternative: use M4-12mm + t-nuts.
 -  6x -  $5 - M4 16mm screws + t-slot nuts (Can use 8-24 t-slot nuts,  part number 3275 at 8020.inc). Mounts the bearing to the 8020 extrusion.
 -  6x -  $1 - #6-1" wood screws - mounts a wooden platform to the bearing. Alternative - double sided tape. 
@@ -57,7 +57,7 @@ Additional tools required for assembly:
 
 Assembly Instructions:
 ----------------------
-The movement in this platform is a quite unique: the belt goes directly from the 40T motor pulley to the big lazy susan bearing, through a bi-lateral belt tensioner. This simple arrangment works incredibly well in practice as it achieves a zero backlash 18:1 typical reduction at a very low cost. The bearing does not need teeth: due to its very large diameter it achieves zero slip through friction. The incidence angle of the belt is gentle enough to not damage the teeth.
+The movement in this platform is a quite unique: the belt goes directly from the 40T motor pulley to the big lazy susan bearing, through a bi-lateral belt tensioner. This simple arrangement works incredibly well in practice as it achieves a zero backlash 18:1 typical reduction at a very low cost. The bearing does not need teeth: due to its very large diameter it achieves zero slip through friction. The incidence angle of the belt is gentle enough to not damage the teeth.
 
 ![Turntable Bottom View](/images/TurntableBottom.jpg?raw=true "Bottom view")
 
@@ -68,15 +68,15 @@ The belt is tensioned by sliding the tensioner towards the  bearing. The tension
 ![Motor Assembly View](/images/motor_assembly_annotated.jpg?raw=true "Motor assembly")
 
 
-The motor attaches to the extrusion using the 3d printed mount. In the latest design, the motor mount design has been updated to allow easy repositioning of the motor as well as to increase the strength (the 3D model looks slightly diffrent than the pictures below). The holes that take the M5 screws from the motor are designed to be tapped (M5 tap), if you don't have one you can simply use longer M4 screws and nuts on the other side, there is enough clearance.
+The motor attaches to the extrusion using the 3d printed mount. In the latest design, the motor mount design has been updated to allow easy repositioning of the motor as well as to increase the strength (the 3D model looks slightly different than the pictures below). The holes that take the M5 screws from the motor are designed to be tapped (M5 tap), if you don't have one you can simply use longer M4 screws and nuts on the other side, there is enough clearance.
 
 ![Motor Mount View](/images/motor_mount_annotated.jpg?raw=true "Motor mount")
 
-The lazy susan bearing is attached directly to the aluminum extrusion by drilling 12 through holes, 4mm diameters: 6 holes in the inside ring and 6 holes in the outside ring. The bearings are usually half-way drilled from the factory, those holes work well as a guide. Two drilling operations are required, one through hole the screw itself (4 - 4.25mm dia drill) and a secondary hole one for the screw sockethead cap (7mm dia drill but only 4mm deep!). The screw socket heads need to be sunk so they don't block the rotation of the bearing - this is needed even if the bearing is offset (the offset is typically 1-2mm). Alternatively, one can use 3D printed raisers with M4 pan head screws. If the bearing rings are not vertically offset (typical for VXB bearings) you will need to insert M4 washers between the bearing and the extrusion to eliminate friction.
+The lazy susan bearing is attached directly to the aluminum extrusion by drilling 12 through holes, 4mm diameters: 6 holes in the inside ring and 6 holes in the outside ring. The bearings are usually half-way drilled from the factory, those holes work well as a guide. Two drilling operations are required, one through hole the screw itself (4 - 4.25mm dia drill) and a secondary hole one for the screw socket-head cap (7mm dia drill but only 4mm deep!). The screw socket heads need to be sunk so they don't block the rotation of the bearing - this is needed even if the bearing is offset (the offset is typically 1-2mm). Alternatively, one can use 3D printed raisers with M4 pan head screws. If the bearing rings are not vertically offset (typical for VXB bearings) you will need to insert M4 washers between the bearing and the extrusion to eliminate friction.
 
 ![Bottom View](/images/platform_bottom.jpg?raw=true "Bottom view")
 
-After the bearing is attached to the extrusion (and the belt testion is roughly correct) the round platform is attached to the bearing with 6 pcs of #6-1" wood screws (and washers). An option here is to use double sided adhesive tape (red in the image), however once mounted like this it won't be possible to access to the screws that go into the extrusion. Double sided tape is however the only option for tempered glass platforms (pictured). The challenging part here is to get the bearing perfectly centered on the plaform, the trick is to find the center of the disk and then draw a circle that matches the bearing outside diameter.
+After the bearing is attached to the extrusion (and the belt tension is roughly correct) the round platform is attached to the bearing with 6 pcs of #6-1" wood screws (and washers). An option here is to use double sided adhesive tape (red in the image), however once mounted like this it won't be possible to access to the screws that go into the extrusion. Double sided tape is however the only option for tempered glass platforms (pictured). The challenging part here is to get the bearing perfectly centered on the platform, the trick is to find the center of the disk and then draw a circle that matches the bearing outside diameter.
 
 ![Turntable Top View](/images/TurntableTop.jpg?raw=true "Top view")
 
