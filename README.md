@@ -26,28 +26,31 @@ Characteristics (typical):
 Parts required:
 ---------------
 Warning: not final, might be incomplete. Please be prepared to make adjustments. Unless otherwise noted, eBay/Amazon is a good source for parts.
--  1x - $40 - 450mm Lazy Susan Aluminum Bearing 500 lbs Turntable Bearings (VXB Brand). 
--  1x - $30 - Stepper motor driver: DM420A. Alternative: HY-DIV268N-5A.
--  1x - $55 - NEMA23, torque: 25 Kg cm (350 oz. in) (example: Wantai 57BYGH115-003 / 3.0A, but many others work here). 
-              Alternative is a NEMA17 planetary gear motor (not for Fusion scans!)
--  4x -  $4 - M5 30mm socket head screws - for the NEMA23 motor mount. Alternative: M4 >35mm and nuts.
--  1x -  $6 - MXL aluminum pulley 40T 8mm bore (anything between 20T and 40T works - bore has to match the motor. GT2 also works). 
--  1x - $10 - 962MXL Timing Belt, .080" Pitch, 77" Outer Circle, 1/4" Wide (McMaster 1679K686, alternative 3/16" 1679K685) 
--  4x -  $3 - F623ZZ: 3x10x4mm flanged bearing for the belt tensioner. Likely to be upgraded to F634zz.
--  2x -  $1 - M3 20mm with 1 nut and 2 washers each. Holds the bearings in the belt tensioner (will be M4 for F634zz).
--  1x -  $0 - 3D printed part for the NEMA23 mount (STLs in the CAD folder)
--  1x -  $0 - 3D printed part for the belt tensioner (STLs in the CAD folder)
--  1x - $20 - Teensy 2.0. Alternative: any Pulse/Dir/Enable capable electronics (examples: Arduino w/ RAMPS shield and shim from Pololu to DM420A or Raspberry Pi 2 with Windows 10 using GPIO pins, etc). 
--  1x - $20 - 1" 8020 72" aluminum extrusion (1010 profile). Will need to be cut in 32"+20"+20". Alternative: metric t-slot extrusion of 20mm or larger.
--  4x -  $4 - 1/4-20 1/2" pan head screws and t-slot nuts - attach the printed parts (motor mount and tensioner) to the aluminum extrusion. Alternative: use M4-12mm + t-nuts.
--  6x -  $5 - M4 16mm screws + t-slot nuts (Can use 8-24 t-slot nuts,  part number 3275 at 8020.inc). Mounts the bearing to the 8020 extrusion.
--  6x -  $1 - #6-1" wood screws - mounts a wooden platform to the bearing. Alternative - double sided tape. 
--  1x -  $1 - 2+ meters (6+ feet) of 6 wire cable to transmit signal: low voltage: Enable/Pulse/Direction/Ground (3.3-5vcc) and 12V DC power to the stepper controller. Good fit: network cable with 2 pairs of wires for motor power. 
--  1x - $40 -  24" (500mm) disc platform. For 3d scanning of people: preferably 1" thick plywood. Alternative: 1 in. x 24 in. x 2 ft. Pine Edge Glued Panel Round Board at Home Depot (paint or cover with no-slip tape). For other uses: polycarbonate or tempered glass (>3/8", heavy!) or 3/8"-1/2" aluminum disc.
-- 12x -  $1 - M4 washers - only needed if the lazy susan bearing is not offset (inside vs outside rings), example VXB bearings.
+
+| Count | Price | Description |
+|-------|-------|-------------|
+| 1x | $40 | 450mm Lazy Susan Aluminum Bearing 500 lbs Turntable Bearings (VXB Brand)|
+| 1x | $30 | Stepper motor driver: DM420A. Alternative: HY-DIV268N-5A|
+| 1x | $55 | NEMA23, torque: 25 Kg cm (350 oz. in) (example: Wantai 57BYGH115-003 / 3.0A, but many others work here). Alternative is a NEMA17 planetary gear motor (not for Fusion scans!)|
+| 4x |  $4 | M5 30mm socket head screws - for the NEMA23 motor mount. Alternative: M4 >35mm and nuts|
+| 1x |  $6 | MXL aluminum pulley 40T 8mm bore (anything between 20T and 40T works - bore has to match the motor. GT2 also works)|
+| 1x | $10 | 962MXL Timing Belt, .080" Pitch, 77" Outer Circle, 1/4" Wide (McMaster 1679K686, alternative 3/16" 1679K685)|
+| 4x |  $3 | F623ZZ: 3x10x4mm flanged bearing for the belt tensioner. Likely to be upgraded to F634zz|
+| 2x |  $1 | M3 20mm with 1 nut and 2 washers each. Holds the bearings in the belt tensioner (will be M4 for F634zz)|
+| 1x |  $0 | 3D printed part for the NEMA23 mount (STLs in the CAD folder: https://github.com/MGX3D/Turntable/blob/master/CAD/3d_scanner_nema23.stl)|
+| 1x |  $0 | 3D printed part for the belt tensioner (STLs in the CAD folder: https://github.com/MGX3D/Turntable/blob/master/CAD/3d_scanner_belt_tensioner.stl)|
+| 1x | $20 | Teensy 2.0. Alternative: any Pulse/Dir/Enable capable electronics (examples: Arduino w/ RAMPS shield and shim from Pololu to DM420A or Raspberry Pi 2 with Windows 10 using GPIO pins, etc)|
+| 1x | $20 | 1" 8020 72" aluminum extrusion (1010 profile). Will need to be cut in 32"+20"+20". Alternative: metric t-slot extrusion of 20mm or larger|
+| 4x |  $4 | 1/4-20 1/2" pan head screws and t-slot nuts - attach the printed parts (motor mount and tensioner) to the aluminum extrusion. Alternative: use M4-12mm + t-nuts|
+| 6x |  $5 | M4 16mm screws + t-slot nuts (Can use 8-24 t-slot nuts,  part number 3275 at 8020.inc). Mounts the bearing to the 8020 extrusion|
+| 6x |  $1 | #6-1" wood screws - mounts a wooden platform to the bearing. Alternative - double sided tape|
+| 1x |  $1 | 2+ meters (6+ feet) of 6 wire cable to transmit signal: low voltage: Enable/Pulse/Direction/Ground (3.3-5vcc) and 12V DC power to the stepper controller. Good fit: network cable with 2 pairs of wires for motor power|
+| 1x | $40 |  24" (500mm) disc platform. For 3d scanning of people: preferably 1" thick plywood. Alternative: 1 in. x 24 in. x 2 ft. Pine Edge Glued Panel Round Board at Home Depot (paint or cover with no-slip tape). For other uses: polycarbonate or tempered glass (>3/8", heavy!) or 3/8"-1/2" aluminum disc|
+| 12x |  $1 | Optional: M4 washers - only needed if the lazy susan bearing is not offset (inside vs outside rings), example VXB bearings|
 
 --
 Approximate total cost: **$250**
+Estimated total parts: 37-49
 
 Additional tools required for assembly: 
    - drill with 4mm and 7mm drills. Hand drill works, drill press is better.
